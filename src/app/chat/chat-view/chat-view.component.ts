@@ -30,6 +30,7 @@ export class ChatViewComponent implements OnInit {
   }
 }
 //ERROR Error: Uncaught (in promise): NullInjectorError: R3InjectorError(AppModule)[RegisterViewComponent -> RegisterViewComponent -> RegisterViewComponent]:
-
+//updated to git 
+//present  
 //ya it is working like prev
-//Nishant: I am reverting for now. See if it compiles and old functionality is there. Great
+//Nishant: I am reverting for now. See if it compiles and old functionality is there. Great. You screen share I will talk
