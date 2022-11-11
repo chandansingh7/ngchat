@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RegisterService } from 'src/app/service/register.service';
 
 @Component({
   selector: 'app-register-view',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegisterViewComponent implements OnInit {
 
-  constructor() { }
+  Chaters: string[] = ["Fun with Taxes", "The Dark Web", "Everything NG", "Mystic 1-4-U"]
+  constructor(private register: RegisterService) { }
 
   ngOnInit(): void {
+
   }
 
 }

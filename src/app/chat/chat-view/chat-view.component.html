@@ -1,3 +1,22 @@
-<app-register-view [chatData]="chatData">chat-view works!</app-register-view>
+<div>
+    <p>
+        <mat-form-field appearance="outline">
+            <input matInput placeholder="Search Chat">
+            <mat-icon matSuffix>person</mat-icon>
+        </mat-form-field>
+        <button mat-raised-button color="primary">Submit</button>
+    </p>
+    <div>
+        <span *ngIf="tableData.length == 0">no data</span>
+        <table *ngIf="tableData.length > 0">
+            <tbody>
+                <tr *ngFor="let row of tableData; let i = index">
+                    <td *ngFor="let item of tableData[i]">{{item}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 
-{{}}
+
+
+</div>

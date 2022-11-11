@@ -1,20 +1,19 @@
 <div>
     <p>
         <mat-form-field appearance="outline">
-            <!-- <mat-label>Outline form field</mat-label> -->
-            <input matInput placeholder="Placeholder">
-            <mat-icon matSuffix>person</mat-icon>
-            <mat-hint>Hint</mat-hint>
+            <input matInput placeholder="Search Name">
+            <mat-icon matSuffix></mat-icon>
         </mat-form-field>
     </p>
-    <button mat-raised-button matTooltip="Info about the action"
-        aria-label="Button that displays a tooltip when focused or hovered over">
-        Action
-    </button>
-
-</div>
-<section>
+    <mat-form-field appearance="fill">
+        <mat-label>Chatters</mat-label>
+        <mat-select>
+            <mat-option *ngFor="let chat of Chaters" [value]="chat">
+                {{chat}}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
     <div class="example-button-row">
-        <button mat-raised-button color="primary">Primary</button>
+        <button mat-raised-button color="primary">Submit</button>
     </div>
-</section>
+</div>

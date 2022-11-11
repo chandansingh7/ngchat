@@ -13,6 +13,9 @@ import { HomeViewComponent } from './home-view/home-view.component';
 import { MatInputModule } from '@angular/material/input';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatButtonModule } from '@angular/material/button';
+import { RegisterService } from './service/register.service';
+import { MatSelectModule } from '@angular/material/select';
+
 
 @NgModule({
   declarations: [
@@ -26,6 +29,7 @@ import { MatButtonModule } from '@angular/material/button';
     BrowserModule,
     MatToolbarModule,
     MatInputModule,
+    MatSelectModule,
     MatButtonModule,
     MatTooltipModule,
     AppRoutingModule,
