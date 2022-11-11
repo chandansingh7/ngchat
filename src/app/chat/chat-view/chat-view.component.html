@@ -8,7 +8,7 @@
     </p>
 
     <span *ngIf="tableData.length == 0">no data</span>
-    <table *ngIf="tableData.length > 0">
+    <table *ngIf="tableData.length > 0" border="1">
         <tbody>
             <tr *ngFor="let row of tableData">
                 <td>{{row.screenName}}</td>
