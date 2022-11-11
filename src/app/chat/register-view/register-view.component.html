@@ -1,19 +1,19 @@
 <div>
     <p>
         <mat-form-field appearance="outline">
-            <input matInput placeholder="Search Name">
+            <input matInput placeholder="Search Name" id="registerTextId" #register [value]="inputValue" />
             <mat-icon matSuffix></mat-icon>
         </mat-form-field>
     </p>
     <mat-form-field appearance="fill">
         <mat-label>Chatters</mat-label>
-        <mat-select>
+        <mat-select id="selectId" #SelectId>
             <mat-option *ngFor="let chat of Chaters" [value]="chat">
                 {{chat}}
             </mat-option>
         </mat-select>
     </mat-form-field>
-    <div class="example-button-row">
-        <button mat-raised-button color="primary">Submit</button>
-    </div>
+
+    <button mat-raised-button color="primary" (click)="getChatValues(register.value, SelectId.value)">Submit</button>
+
 </div>

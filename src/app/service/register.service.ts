@@ -8,7 +8,7 @@ import { ChatViewComponent } from '../chat/chat-view/chat-view.component';
   providedIn: 'root'
 })
 export class RegisterService implements OnInit {
-  public chatModels: ChatModel[] = []
+  chatModels: ChatModel[] = []
 
   constructor(private httpClient: HttpClient) {
     this.httpClient.get<ChatModel[]>("https://us-central1-pka-forms-fef14.cloudfunctions.net/getMessages?room=Mystic-1-4-U").

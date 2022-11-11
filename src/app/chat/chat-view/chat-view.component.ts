@@ -8,7 +8,6 @@ import { RegisterService } from 'src/app/service/register.service';
 })
 export class ChatViewComponent implements OnInit {
   tableData: any[] = [];
-  serverData: any[] = [];
 
   constructor(private register: RegisterService) { }
 
@@ -18,6 +17,13 @@ export class ChatViewComponent implements OnInit {
     // console.log(this.chatData[0].message);
     // console.log(this.chatData[1].timestamp);
     // console.log(this.chatData[0].chatRoom);
+  }
+
+  addMessage(screenName: string, message: string, chatRoom: string) {
+    const input = document.getElementById('chatTextId')?.nodeValue;
+    console.log(input);
+    const timestamp = new Date();
+    this.tableData.push({ message, timestamp, chatRoom, screenName });
   }
 }
 
