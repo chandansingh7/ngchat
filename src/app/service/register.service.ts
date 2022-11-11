@@ -12,7 +12,8 @@ export class RegisterService implements OnInit {
   constructor(private httpClient: HttpClient) { }
 
   ngOnInit() {
-    //this.httpClient.get<ChatModel[]>("https://us-central1-pka-forms-fef14.cloudfunctions.net/getMessages?room=Mystic-1-4-U").subscribe()
+    this.httpClient.get<ChatModel[]>("https://us-central1-pka-forms-fef14.cloudfunctions.net/getMessages?room=Mystic-1-4-U").subscribe(
+    )
   }
 
 
@@ -20,15 +21,16 @@ export class RegisterService implements OnInit {
 
   getData() {
     return this.httpClient.get<ChatModel[]>("https://us-central1-pka-forms-fef14.cloudfunctions.net/getMessages?room=Mystic-1-4-U").
-      pipe(
-        map((data: ChatModel[]) => {
-          return data;
-        }), catchError(error => {
-          return throwError('Something went wrong!');
-        })
-      )
+      subscribe((data) => {
+        this.chatModels = data;
+        //console.log(data);
+        //console.log(this.chatModels);
+        // console.log(this.chatModels[0].message);
+        // console.log(this.chatModels[1].timestamp);
+        // console.log(this.chatModels[0].chatRoom);
+        // console.log(this.chatModels[0].screenName);
+      })
   }
+
+
 }
-
-
-  // -------------
