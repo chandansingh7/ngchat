@@ -6,17 +6,14 @@
         </mat-form-field>
         <button mat-raised-button color="primary">Submit</button>
     </p>
-    <div>
-        <span *ngIf="tableData.length == 0">no data</span>
-        <table *ngIf="tableData.length > 0">
-            <tbody>
-                <tr *ngFor="let row of tableData; let i = index">
-                    <td *ngFor="let item of tableData[i]">{{item}}</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
 
-
-
+    <span *ngIf="tableData.length == 0">no data</span>
+    <table *ngIf="tableData.length > 0">
+        <tbody>
+            <tr *ngFor="let row of tableData">
+                <td>{{row.screenName}}</td>
+                <td>{{row.message}}</td>
+            </tr>
+        </tbody>
+    </table>
 </div>
