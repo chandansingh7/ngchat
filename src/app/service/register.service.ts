@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Injectable, OnInit } from '@angular/core';
+import { Injectable, OnInit, Output } from '@angular/core';
 import { catchError, map, throwError } from 'rxjs';
 import { ChatModel } from '../models/models';
 
@@ -7,7 +7,7 @@ import { ChatModel } from '../models/models';
   providedIn: 'root'
 })
 export class RegisterService implements OnInit {
-  chatModels: ChatModel[] = []
+  @Output() chatModels: ChatModel[] = []
 
   constructor(private httpClient: HttpClient) { }
 

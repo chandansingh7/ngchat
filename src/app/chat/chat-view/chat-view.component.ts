@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { RegisterService } from 'src/app/service/register.service';
 
 @Component({
@@ -7,11 +7,13 @@ import { RegisterService } from 'src/app/service/register.service';
   styleUrls: ['./chat-view.component.css']
 })
 export class ChatViewComponent implements OnInit {
+  @Input() chatData: any[][] = [];
 
   constructor(private register: RegisterService) { }
 
   ngOnInit(): void {
-    console.log(this.register.getData());
+    //this.chatData
+= this.register.getData(); console.log(this.register.getData());
   }
 
 }
